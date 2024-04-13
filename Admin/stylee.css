@@ -1,0 +1,322 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  
+  body
+  {
+    background-color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .container1
+  {
+      position: relative;
+      width: 100%;
+  }
+
+  .heading
+{
+	width: 250px;
+	background: #fc4f19;
+	background: linear-gradient(90deg,#302c2b 0,#a19a8b 100%);
+	
+}
+
+.heading.active
+{
+	width: 80px;
+    transition: 0.5s;
+}
+
+.heading .title
+{
+	position: relative;
+	font-size: 40px;
+	color: #fff;
+	top: 10px;
+	left: 45px;
+	width: 100%;
+
+}
+
+.heading .title.active
+{
+    color:transparent;
+}
+
+.db
+{
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	background: #fc4f19;
+    background: linear-gradient(90deg,#fc4f19 0,#f6a60d 100%);
+	border-left: 10px solid #fc4f19;
+	transition: 0.5s;
+	overflow: hidden;
+}
+
+.db ul
+{
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	width: 100%;	
+}
+
+.db ul li
+{
+	position: relative;
+	width: 100%;
+	list-style: none;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;	
+}
+
+
+.db ul li:hover
+{
+	background: #fff;
+}
+
+.db ul li a
+{
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+	text-decoration: none;
+	color: white;
+}
+
+.db ul li:hover a
+{
+	color: #fc4f19;
+	
+}
+
+.db ul li a .heading
+{
+	position: absolute;	
+}
+.db ul li a .icon
+{
+	position: relative;
+	display: block;
+	min-width: 30px;
+	height: 60px;
+	line-height: 70px;
+}
+
+.db ul li a .material-icons
+{
+	font-size: 1.76em;
+	line-height: 50px;
+}
+.db ul li a .title
+{
+	position: relative;
+	display: block;
+	padding: 0 10px;
+	height: 60px;
+	line-height: 50px;
+}
+
+.main
+{
+	position: absolute;
+	width: calc(100% - 250px);
+	left: 250px;
+	top: 0;
+	min-height: 100vh;
+	background: #fff;
+	transition: 0.5s;
+}
+
+.main.active
+{
+	width: calc(100% - 70px);
+	left: 70px;
+		
+}
+
+.topbar
+{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	background: #fff;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 10px;
+}
+
+.menu
+{
+	position: relative;
+	width: 60px;
+	height: 40px;
+	display: flex;
+	align-items: left;
+	font-size: 2.5em;
+	cursor: pointer;	
+}
+	
+.user
+{
+	position: relative;
+	min-width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.user img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.cardbox
+{
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+
+.cardbox .card
+{
+    position: relative;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor:pointer;
+    box-shadow:  0 7px 25px rgba(0,0,0,0.08);
+}
+
+.cardbox .card .numbers
+{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: rgb(105, 104, 104);
+}
+
+.cardbox .card .cardname
+{
+    color: rgb(105, 104, 104);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.cardbox .card .iconbox
+{
+    font-size: 3.5em;
+    color: rgb(105, 104, 104);
+}
+
+.cardbox .card:hover
+{
+    background: #fc4f19;
+    background: linear-gradient(90deg,#fc4f19 0,#f6a60d 100%);
+}
+
+.cardbox .card:hover .numbers
+{
+    color: rgb(247, 241, 241);
+}
+
+.cardbox .card:hover .cardname
+{
+    color: rgb(247, 241, 241);
+}
+
+.cardbox .card:hover .iconbox
+{
+    color: rgb(247, 241, 241);
+}
+
+#curve_chart
+{
+	position: relative;
+	width:70%;
+	top: 100px;
+	left: 0px;
+	height: 400px;
+	overflow: hidden;
+}
+
+#piechart_3d
+{
+	position: relative; 
+	width: 50%;
+	top: -290px;
+	left: 650px;
+	height: 400px;
+	overflow: hidden;
+}
+
+@media (max-width: 768px)
+{
+    .heading
+    {
+        left: -300px;
+     }
+
+    .heading .active
+    {
+        left: 0px;
+    }
+
+    .main
+    {
+        width: 100%;
+        left: 0;
+    }
+
+    .main.active
+    {
+        left: 200px;
+    }
+
+    .cardbox
+    {
+        position: relative;
+        width: 85%;
+        left: 0px;
+        padding: 70px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+	#curve_chart
+	{
+		position: relative;
+		left: 0;
+		width: 100%;
+		height: 500px;
+
+	}
+
+	#piechart_3d
+	{
+		position:relative;
+		left: 0;
+		top: 200px;
+		width: 110%;
+		height: 500px;
+	}
+}
